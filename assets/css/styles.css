@@ -1,0 +1,59 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Lato, sans-serif;
+    background-color: #232e33;
+}
+
+nav.navbar {
+    display: flex;
+    background-color: #192024;
+    font-weight: bold;
+    justify-content: flex-end;
+    align-items: center;
+    height: 52px;
+}
+
+ul.navbar-links {
+    list-style: none;
+    display: flex;
+    padding-right: 10px;
+}
+
+.nav-link {
+    display: block;
+    text-decoration: none;
+    height: 20px;
+    padding: 15px;
+    color: white;
+    border-bottom: 2px solid #192024;
+
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid #ffffff;
+}
+
+.active {
+    border-bottom: 2px solid rgb(250, 156, 172);
+}
+
+.content {
+    height: 100vh;
+}
+
+.footer-container {
+    display: flex;
+    height: 120px;
+    width: auto;
+    background-color: #192024;
+}
+
+.logo-uniube {
+    height: 30px;
+    width: 150px;
+    padding: 20px;
+}
