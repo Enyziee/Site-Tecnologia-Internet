@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', { packages: ['corechart', 'line'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            // Add your sheets url and range below
+            var spreadsheetUrl = "https://docs.google.com/spreadsheets/d/1s9V9Ozz7UJgwTq4h-9SLklONcEkuuP6QCBjxxkkd-w8/gviz/tq?tq=select%20B&tqx=out:csv";
+
+            var query = new google.visualization.Query(spreadsheetUrl);
+            query.send(handleQueryResponse);
+        }
+
+        function handleQueryResponse(response) {
+            var dataTable = response.getDataTable();
+
+            console.log(dataTable.getValue(0, 0).toLocaleString());
+
+            document.getElementById("player-count").innerHTML = dataTable.getValue(0, 0).toLocaleString();
+            // https://developers.google.com/chart/interactive/docs/reference?hl=en#methods
+            // getValue(rowIndex, columnIndex)
+            //document.getElementById("test").innerHTML = dataTable.getValue(0, 0);
+            // document.getElementById("test").innerHTML = (dataTable.getValue(0, 0)).toLocaleString();
+        }
+
+    </script>
+    <title>Dota 2</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="navbar-links">
+            <li><a class="nav-link" href="../index.html">HOME</a></li>
+            <li><a class="nav-link" href="../jogos.html">JOGOS</a></li>
+            <li><a class="nav-link" href="../sobre.html">SOBRE</a></li>
+        </ul>
+    </nav>
+
+    <div class="content" style="color: white;">
+        <h1>Players count: </h1>
+        <p id="player-count"> 0 </p>
+    </div>
+    <footer class="footer-container">
+        <div class="logo-uniube">
+            <a href="https://uniube.br" target="_blank">
+                <img src="https://uniube.br/img/landing/logo_branca.svg" alt="Logo Uniube">
+            </a>
+        </div>
+        <div class="social">
+            <p class="nome">Feito por Samuel Kenedy 🐱</p>
+            <a href="https://www.instagram.com/kenedy_672/"><img class="insta-logo" src="assets/img/icons8-instagram.svg" alt=""></a></a>
+        </div>
+    </footer>
+</body>
+
+</html>

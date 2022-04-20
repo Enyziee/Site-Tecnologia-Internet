@@ -23,6 +23,12 @@ ul.navbar-links {
     padding-right: 10px;
 }
 
+.nav-logo {    
+    background-color: #192024;
+    height: 35px;
+    padding: 10px;
+}
+
 .nav-link {
     display: block;
     text-decoration: none;
@@ -30,7 +36,6 @@ ul.navbar-links {
     padding: 15px;
     color: white;
     border-bottom: 2px solid #192024;
-
 }
 
 .nav-link:hover {
@@ -41,14 +46,29 @@ ul.navbar-links {
     border-bottom: 2px solid rgb(250, 156, 172);
 }
 
+h1 {
+    display: block;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
 .content {
-    height: 100vh;
+    height: 73vh;
+    display: flex;
+}
+
+.content div {
+    text-align: center;
+    padding: 20px;
+    color: white
 }
 
 .footer-container {
     display: flex;
     height: 120px;
     width: auto;
+    justify-content: space-between;
     background-color: #192024;
 }
 
@@ -56,4 +76,44 @@ ul.navbar-links {
     height: 30px;
     width: 150px;
     padding: 20px;
+}
+
+
+
+.images {
+    display: flex;
+    padding: 30px;
+}
+
+.images div {
+    padding: 20px;
+}
+
+.images img {
+    height: 180px;
+}
+
+.images img:hover {
+    box-shadow: 0px 0px 30px 5px rgb(250, 156, 172);
+    transform: scale(1.02);
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nome {
+    color: white;
+    padding-top: 20px;
+    padding-right: 20px;
+    font-weight: bold;    
+}
+
+.insta-logo {
+
+    height: 35px;
+    width: 35px;
+    padding-right: 20px;
 }
