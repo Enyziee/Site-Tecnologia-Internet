@@ -47,7 +47,7 @@ ul.navbar-links {
 }
 
 h1 {
-    display: block;
+    /* display: block; */
     padding: 20px;
     color: white;
     text-align: center;
@@ -60,7 +60,7 @@ h1 {
 
 .content div {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     color: white
 }
 
@@ -77,8 +77,6 @@ h1 {
     width: 150px;
     padding: 20px;
 }
-
-
 
 .images {
     display: flex;
@@ -116,4 +114,22 @@ h1 {
     height: 35px;
     width: 35px;
     padding-right: 20px;
+}
+
+.img-game-logo {
+    height: 250px;
+    border: solid 1px black;
+    box-shadow: 0px 0px 25px 2px black;
+}
+
+.text-container {
+    width: 100%;
+}
+
+.left-text {
+    text-align: left;
+}
+
+#title {
+    text-align: center;
 }
