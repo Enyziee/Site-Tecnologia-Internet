@@ -23,12 +23,6 @@ ul.navbar-links {
     padding-right: 10px;
 }
 
-.nav-logo {    
-    background-color: #192024;
-    height: 35px;
-    padding: 10px;
-}
-
 .nav-link {
     display: block;
     text-decoration: none;
@@ -47,14 +41,12 @@ ul.navbar-links {
 }
 
 h1 {
-    /* display: block; */
     padding: 20px;
     color: white;
     text-align: center;
 }
 
 .content {
-    height: 73vh;
     display: flex;
 }
 
@@ -67,7 +59,9 @@ h1 {
 .footer-container {
     display: flex;
     height: 120px;
-    width: auto;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
     justify-content: space-between;
     background-color: #192024;
 }
@@ -78,22 +72,23 @@ h1 {
     padding: 20px;
 }
 
-.images {
+.container-jogos {
     display: flex;
+    flex-wrap: wrap;
+    width: max-content;
+    min-width: 20%;
     padding: 30px;
 }
 
-.images div {
-    padding: 20px;
-}
-
-.images img {
+.jogo-icon {
     height: 180px;
+    width: 135px;
 }
 
-.images img:hover {
+.jogo-icon:hover {
     box-shadow: 0px 0px 30px 5px rgb(250, 156, 172);
-    transform: scale(1.02);
+    /* transform: rotate(1.0deg); */
+    transform: scale(1.01);
 }
 
 .social {
@@ -110,7 +105,6 @@ h1 {
 }
 
 .insta-logo {
-
     height: 35px;
     width: 35px;
     padding-right: 20px;
@@ -118,6 +112,7 @@ h1 {
 
 .img-game-logo {
     height: 250px;
+    width: 187.5px;
     border: solid 1px black;
     box-shadow: 0px 0px 25px 2px black;
 }
@@ -137,10 +132,11 @@ h1 {
 table {
     /* border: solid 1px black; */
     border-collapse: collapse;
+
 }
 
 td {
-    text-align: ;
+    font-size: 18px;
 }
 
 .tabela {
@@ -149,3 +145,7 @@ td {
     justify-content: center;
 }
 
+.platform-icon {
+    height: 25px;
+    width: 25px;
+}
