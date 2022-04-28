@@ -62,6 +62,7 @@ h1 {
     width: 100%;
     position: absolute;
     bottom: 0px;
+    /* min-height: ; */
     justify-content: space-between;
     background-color: #192024;
 }
@@ -72,12 +73,19 @@ h1 {
     padding: 20px;
 }
 
-.container-jogos {
+.content-jogos {    
+    display: flex;
+}
+
+.links-jogos {
     display: flex;
     flex-wrap: wrap;
     width: max-content;
-    min-width: 20%;
-    padding: 30px;
+
+}
+
+.links-jogos div {
+    padding: 15px;
 }
 
 .jogo-icon {
@@ -86,7 +94,7 @@ h1 {
 }
 
 .jogo-icon:hover {
-    box-shadow: 0px 0px 30px 5px rgb(250, 156, 172);
+    box-shadow: 0px 0px 30px 5px rgba(250, 156, 172, 0.637);
     /* transform: rotate(1.0deg); */
     transform: scale(1.01);
 }
@@ -149,3 +157,8 @@ td {
     height: 25px;
     width: 25px;
 }
+/* 
+.jogos-conteudo {
+    display: flex;
+    flex-direction: column;
+} */
