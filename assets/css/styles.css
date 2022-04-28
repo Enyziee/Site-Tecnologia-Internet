@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
@@ -7,6 +9,8 @@ body {
     font-family: Lato, sans-serif;
     background-color: #232e33;
 }
+
+/* Navigation Bar */
 
 nav.navbar {
     display: flex;
@@ -40,6 +44,8 @@ ul.navbar-links {
     border-bottom: 2px solid rgb(250, 156, 172);
 }
 
+/* Resto */
+
 h1 {
     padding: 20px;
     color: white;
@@ -56,32 +62,15 @@ h1 {
     color: white
 }
 
-.footer-container {
-    display: flex;
-    height: 120px;
-    width: 100%;
-    position: absolute;
-    bottom: 0px;
-    /* min-height: ; */
-    justify-content: space-between;
-    background-color: #192024;
-}
-
-.logo-uniube {
-    height: 30px;
-    width: 150px;
-    padding: 20px;
-}
-
-.content-jogos {    
+.content-jogos {
     display: flex;
 }
 
 .links-jogos {
     display: flex;
+    overflow: auto;
     flex-wrap: wrap;
     width: max-content;
-
 }
 
 .links-jogos div {
@@ -95,27 +84,8 @@ h1 {
 
 .jogo-icon:hover {
     box-shadow: 0px 0px 30px 5px rgba(250, 156, 172, 0.637);
-    /* transform: rotate(1.0deg); */
+
     transform: scale(1.01);
-}
-
-.social {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.nome {
-    color: white;
-    padding-top: 20px;
-    padding-right: 20px;
-    font-weight: bold;    
-}
-
-.insta-logo {
-    height: 35px;
-    width: 35px;
-    padding-right: 20px;
 }
 
 .img-game-logo {
@@ -138,9 +108,7 @@ h1 {
 }
 
 table {
-    /* border: solid 1px black; */
     border-collapse: collapse;
-
 }
 
 td {
@@ -157,8 +125,46 @@ td {
     height: 25px;
     width: 25px;
 }
-/* 
-.jogos-conteudo {
+
+
+/* Footer */
+
+.footer-container {
+    display: flex;
+    padding-bottom: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    justify-content: space-between;
+    background-color: #192024;
+}
+
+.logo-uniube img {
+    height: 46px;
+    width: 150px;
+}
+
+.logo-uniube {
+    height: 30px;
+    width: 150px;
+    padding: 20px;
+}
+
+.nome {
+    color: white;
+    padding-top: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+}
+
+.insta-logo {
+    height: 35px;
+    width: 35px;
+    padding-right: 20px;
+}
+
+.social {
     display: flex;
     flex-direction: column;
-} */
+    align-items: center;
+}
