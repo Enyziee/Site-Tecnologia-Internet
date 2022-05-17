@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', { packages: ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            // Add your sheets url and range below
+            var spreadsheetUrl = "https://docs.google.com/spreadsheets/d/1DBaaHRKzDLBYhldSofVjfOoZd0w1v7EBake67378t3w/gviz/tq?tq=select%20O&tqx=out:csv";
+
+            var query = new google.visualization.Query(spreadsheetUrl);
+            query.send(handleQueryResponse);
+        }
+
+        function handleQueryResponse(response) {
+            var dataTable = response.getDataTable();
+
+            console.log(dataTable.getValue(0, 0).toLocaleString());
+
+            document.getElementById("player-count").innerHTML = dataTable.getValue(0, 0).toLocaleString();
+            // https://developers.google.com/chart/interactive/docs/reference?hl=en#methods
+            // getValue(rowIndex, columnIndex)
+            //document.getElementById("test").innerHTML = dataTable.getValue(0, 0);
+            // document.getElementById("test").innerHTML = (dataTable.getValue(0, 0)).toLocaleString();
+        }
+
+    </script>
+    <title>Destiny 2</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="navbar-links">
+            <li><a class="nav-link" href="../index.html">HOME</a></li>
+            <li><a class="nav-link" href="../jogos.html">JOGOS</a></li>
+            <li><a class="nav-link" href="../sobre.html">SOBRE</a></li>
+        </ul>
+    </nav>
+
+    <section class="jogo-content" style="color: white;">
+        <div>
+            <div>
+                <img class="img-game-logo" src="../assets/img/Destiny_2_capa.jpg" alt="">
+                <p>Jogadores simultâneos:<br><span id="player-count">0</span></p>
+            </div>
+            <div class="tabela">
+                <table>
+                    <tr colspan="2">Plataformas:</tr>
+                    <tr>
+                        <td>Windows:</td>
+                        <td> <img class="platform-icon" src="../assets/img/green.png" alt="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Linux:</td>
+                        <td><img class="platform-icon" src="../assets/img/red.png" /></td>
+                    </tr>
+                    <tr>
+                        <td>MAC:</td>
+                        <td><img class="platform-icon" src="../assets/img/red.png"></td>
+                    </tr>
+                    <tr>
+                        <td>Android:</td>
+                        <td><img class="platform-icon" src="../assets/img/red.png" /></td>
+                    </tr>
+                    <tr>
+                        <td>iOS:</td>
+                        <td><img class="platform-icon" src="../assets/img/red.png" /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="text-container">
+            <h1 id="title">Informações sobre Destiny 2</h1>
+
+            <h2>Sobre Destiny 2</h2>
+            <p class="left-text">
+                Destiny 2 é um jogo eletrônico de tiro em primeira pessoa multijogador desenvolvido pela Bungie e
+                publicado pela Activision. Foi lançado para PlayStation 4 e Xbox One em 6 de setembro de 2017, seguido
+                por uma versão para Microsoft Windows no mês seguinte. É a continuação de Destiny (2014) e de suas
+                expansões subsequentes. Situado em um mundo de "ficção científica mítica", o jogo apresenta um ambiente
+                multiplayer de "mundo compartilhado" com elementos de RPG. Como no original, as atividades no Destiny 2
+                são divididas entre os tipos de jogo jogador contra ambiente (PvE) e jogador contra jogador (PvP). Além
+                das missões normais da história, o PvE apresenta "strikes" de três jogadores e raids de seis jogadores.
+                Um modo de patrulha livre também está disponível para cada planeta e apresenta eventos públicos, bem
+                como novas atividades não apresentadas no original. Essas novas atividades tem ênfase na exploração dos
+                planetas e interações com personagens não jogáveis (NPCs); o Destiny original só apresentava NPCs em
+                espaços sociais. O PvP possui modos baseados em objetivos, assim como modos tradicionais de jogo
+                mata-mata. <br><br>
+
+                Os jogadores assumem o papel de um Guardião, protetores da última cidade segura da Terra, enquanto
+                exercem um poder chamado Luz para proteger a Última Cidade de diferentes raças alienígenas. Uma dessas
+                raças, a Cabal, liderada pelo senhor da guerra Dominus Ghaul, se infiltra na Última Cidade e retira
+                todos os Guardiões da Luz. O jogador parte em uma jornada para recuperar sua Luz e encontrar uma maneira
+                de derrotar Ghaul e seu exército da Legião Vermelha e recuperar a última cidade. Como o Destiny
+                original, o jogo apresenta pacotes de expansão que promovem a história e adicionam novos conteúdos e
+                missões. O primeiro ano de Destiny 2 apresentou duas pequenas expansões, Curse of Osiris em dezembro de
+                2017 e Warmind em maio de 2018. Uma terceira grande expansão, Forsaken, foi lançada em setembro de 2018,
+                começando o segundo ano com uma reformulação na jogabilidade. O jogo base e as três primeiras expansões
+                foram empacotados em Destiny 2: Forsaken Legendary Collection.<br><br>
+
+                Após o seu lançamento, Destiny 2 recebeu críticas favoráveis dos críticos. O jogo recebeu elogios por
+                suas muitas melhorias em relação ao seu antecessor. O Destiny original recebeu muitas críticas por sua
+                história, mas o Destiny 2 foi elogiado por ter uma "história mais robusta" e um verdadeiro vilão em
+                carne e osso. Como no original, a jogabilidade na maior parte também foi altamente elogiada. As
+                críticas foram divididas sobre a recategorização das armas e as atividades mais recentes, como os
+                Setores de Aventuras e Perdidos, mas o elogio foi unânime na exploração do mundo do jogo. Mudanças no
+                PvP foram bem recebidas por alguns críticos, embora outras tenham sido críticas para o modo que faltava
+                à escolha do jogador. Destiny 2 foi indicado e ganhou vários prêmios, como no The Game Awards 2017 e no
+                Game Critics Awards.
+            </p>
+
+        </div>
+    </section>
+    <footer class="footer-container">
+        <div class="logo-uniube">
+            <a href="https://uniube.br" target="_blank">
+                <img src="../assets/img/logo_branca.svg" alt="Logo Uniube">
+            </a>
+        </div>
+        <div class="social">
+            <p class="nome">Feito por Samuel Kenedy 🐱</p>
+            <a href="https://www.instagram.com/kenedy_672/"><img class="insta-logo"
+                    src="../assets/img/icons8-instagram.svg" alt=""></a>
+        </div>
+    </footer>
+</body>
+
+</html>

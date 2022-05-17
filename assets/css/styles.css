@@ -52,19 +52,92 @@ h1 {
     text-align: center;
 }
 
-.content {
+.jogo-content {
     display: flex;
-}
-
-.content div {
-    text-align: center;
-    padding: 15px;
-    color: white
+    padding: 2%;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
 }
 
 .content-jogos {
     display: flex;
 }
+
+/* 
+.links-jogos {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(150px, 1fr));
+} */
+
+.title {
+    width: 100%;
+    display: block;
+}
+
+.infos {
+    display: flex;
+    padding-left: 15%;
+    padding-right: 15%;
+    justify-content: space-between;
+
+}
+
+.sobre {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.block-info h2 {
+    text-align: center;
+
+}
+
+.block-info p {
+    text-align: justify;
+    padding: 10px;
+}
+
+.block-info {
+    border-radius: 8px;
+    /* border: solid 2px rgba(250, 156, 172, 0.637); */
+    color: white;
+    background-color: #1d252b;
+    /* box-shadow: 0px 5px 5px 2px rgb(250, 156, 172); */
+    border-bottom: 1px solid rgb(250, 156, 172);
+    /* text-decoration: underline ; */
+    display: block;
+    width: 45%;
+    min-width: 15%;
+    height: 20vh;
+}
+
+.block-info-sobre {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
+    border-radius: 8px;
+    /* border: solid 2px rgba(250, 156, 172, 0.637); */
+    color: white;
+    background-color: #1d252b;
+    /* box-shadow: 0px 5px 5px 2px rgb(250, 156, 172); */
+    border-bottom: 1px solid rgb(250, 156, 172);
+    /* text-decoration: underline ; */
+    display: block;
+    width: 100%;
+    min-width: 15%;
+    height: 15vh;
+}
+
+.block-info-sobre h2 {
+    padding-top: 2%;
+    text-align: center;
+}
+
+.block-info-sobre p {
+    padding: 0 2%;
+}
+
 
 .links-jogos {
     display: flex;
@@ -74,7 +147,7 @@ h1 {
 }
 
 .links-jogos div {
-    padding: 15px;
+    padding: 18px;
 }
 
 .jogo-icon {
@@ -83,8 +156,8 @@ h1 {
 }
 
 .jogo-icon:hover {
-    box-shadow: 0px 0px 30px 5px rgba(250, 156, 172, 0.637);
-
+    box-sizing: border-box;
+    border: 3px solid white;
     transform: scale(1.01);
 }
 
@@ -96,6 +169,7 @@ h1 {
 }
 
 .text-container {
+    padding: 2%;
     width: 100%;
 }
 
@@ -129,12 +203,14 @@ td {
 
 /* Footer */
 
+.absolute {
+    position: absolute;
+    bottom: 0px;
+}
+
 .footer-container {
     display: flex;
-    padding-bottom: 20px;
     width: 100%;
-    position: fixed;
-    bottom: 0px;
     justify-content: space-between;
     background-color: #192024;
 }
@@ -144,9 +220,11 @@ td {
     width: 150px;
 }
 
+.logo-uniube a {
+    display: block;
+}
+
 .logo-uniube {
-    height: 30px;
-    width: 150px;
     padding: 20px;
 }
 
@@ -167,4 +245,63 @@ td {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+/* Botão jogo aleatório */
+
+.button {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    outline: 2px solid white;
+    padding: 30px 60px;
+    position: relative;
+    overflow: hidden;
+    transition: color 1s;
+}
+
+
+
+/* .button:hover {
+    color: #833ab4;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: width 1s;
+}
+
+.button:hover::before {
+    width: 100%;
+} */
+
+
+.formulario {
+    padding-top: 2%;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+
+}
+
+.form {
+    height: 250px;
+}
+
+.problema {
+    width: 100%
+}
+
+.problema textarea {
+    resize: none;
 }
